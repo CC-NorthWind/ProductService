@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ProductService.Shared;
 using ProductService.Shared.Common;
+using ProductService.Shared.Dto.Entities;
 using ProductService.Shared.Requests;
 
 namespace ProductService.Controllers
@@ -25,7 +26,10 @@ namespace ProductService.Controllers
 
             return new GenericResponse<GetProductResponse>()
             {
-                Data = _productService.GetProducts(null),
+                Data = new GetProductResponse()
+                {
+                    Products = new List<ProductDto>() { new ProductDto() { ProductName = "Test" } },
+                },
                 ErrorMessage = null,
                 IsSuccess = true
             };

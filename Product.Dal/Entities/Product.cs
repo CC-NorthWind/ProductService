@@ -15,5 +15,8 @@ namespace ProductService.Dal.Entities
         public short UnitsOnOrder { get; set; }
         public short ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
+
+        [ForeignKey("SupplierID")]
+        public virtual Supplier Supplier { get; set; }
     }
 }

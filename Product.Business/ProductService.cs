@@ -1,8 +1,6 @@
-﻿using ProductService.Shared.Requests;
+﻿using ProductService.Dal;
 using ProductService.Shared;
-using ProductService.Shared.Dto.Entities;
-using ProductService.Dal;
-using Azure;
+using ProductService.Shared.Requests;
 
 namespace ProductService.Business
 {

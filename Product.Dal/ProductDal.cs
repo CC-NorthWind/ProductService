@@ -17,10 +17,7 @@ namespace ProductService.Dal
             //Provide all the Mapping Configuration
             _mapper = MappingProfile.InitializeAutoMapper().CreateMapper();
 
-            var optionBuilder = new DbContextOptionsBuilder<NWindProductContext>();
-            optionBuilder.UseLazyLoadingProxies();
-            optionBuilder.UseSqlServer("Server=192.168.29.52;Database=Northwind;User Id=sa;Password=Cbse#1728;Encrypt=false;TrustServerCertificate=true;");
-            _dbContext = new NWindProductContext(optionBuilder.Options);
+           
         }
 
         public IList<ProductDto> GetProducts()
